@@ -1,6 +1,6 @@
 {
   "name": "srt-to-vtt-bulk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "convert multiple srt files to vtt files at once",
   "main": "index.js",
   "bin": {
