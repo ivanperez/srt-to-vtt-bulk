@@ -7,14 +7,14 @@ var fs = require('fs');
 var path = require('path');
 
 module.exports = function (directoryPath){
-
+    console.log('Searching srt files in', directoryPath);
     //collect srt files
     fs.readdir(directoryPath, function(err, fileNames){
         var srtFileNames = fileNames.filter(function(fileName){
             return fileName.endsWith('.srt');
         });
 
-        // console.log(srtFileNames);
+        console.log("There are", srtFileNames.length, "srt files.");
 
 
         //a vtt file has the same name with the corresponding srt file
@@ -23,7 +23,7 @@ module.exports = function (directoryPath){
             return srtFileName.slice(0,lastIndex) + '.vtt';
         });
 
-        // console.log(vttFileNames);
+        console.log("Converting srt to vtt...");
 
         //for each srt, convert the srt file to vtt file
         for (var i=0;i<srtFileNames.length;i++){
@@ -35,5 +35,6 @@ module.exports = function (directoryPath){
             var output = fs.createWriteStream(vttFilePath);
             input.pipe(srt_to_vtt()).pipe(output);
         }
+        console.log('Done');
     });
 };
