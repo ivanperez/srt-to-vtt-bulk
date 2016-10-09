@@ -1,0 +1,3 @@
+test/*.vtt
+node_modules
+.idea
