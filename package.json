@@ -4,7 +4,7 @@
   "description": "convert multiple srt files to vtt files at once",
   "main": "index.js",
   "bin": {
-    "srt-to-vtt-bulk": "./bin.js"
+    "srt-to-vtt-bulk": "./cli.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
