@@ -1,6 +1,6 @@
 # srt-to-vtt-bulk
 
-This program is built based on [srt-to-vtt]().
+This program is built based on [srt-to-vtt](https://www.npmjs.com/package/srt-to-vtt).
 
 ## Install
 
