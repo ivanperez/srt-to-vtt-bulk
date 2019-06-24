@@ -25,6 +25,6 @@
   },
   "homepage": "https://github.com/ivanperez/vtt-to-srt-bulk#readme",
   "dependencies": {
-    "vtt-to-srt": "^1"
+    "vtt-to-srt": "^0.1.0"
   }
 }
