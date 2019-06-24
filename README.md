@@ -1,4 +1,4 @@
-# srt-to-vtt-bulk
+# vtt-to-srt-bulk
 
 This program is built based on [vtt-to-srt](https://www.npmjs.com/package/vtt-to-srt).
 
