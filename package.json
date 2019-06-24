@@ -1,30 +1,30 @@
 {
-  "name": "srt-to-vtt-bulk",
-  "version": "1.0.2",
+  "name": "vtt-to-srt-bulk",
+  "version": "1.0.0",
   "description": "convert multiple srt files to vtt files at once",
   "main": "index.js",
   "bin": {
-    "srt-to-vtt-bulk": "./cli.js"
+    "vtt-to-srt-bulk": "./cli.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/junghyun87/srt-to-vtt-bulk.git"
+    "url": "git+https://github.com/ivanperez/vtt-to-srt-bulk.git"
   },
   "keywords": [
     "srt",
     "vtt",
     "subtiles"
   ],
-  "author": "Jung-Hyun Kwon",
+  "author": "Ivan Perez",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/junghyun87/srt-to-vtt-bulk/issues"
+    "url": "https://github.com/ivanperez/vtt-to-srt-bulk/issues"
   },
-  "homepage": "https://github.com/junghyun87/srt-to-vtt-bulk#readme",
+  "homepage": "https://github.com/ivanperez/vtt-to-srt-bulk#readme",
   "dependencies": {
-    "srt-to-vtt": "^1.1.1"
+    "vtt-to-srt": "^1"
   }
 }

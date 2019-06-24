@@ -1,8 +1,8 @@
 /**
- * Created by junghyun on 2016. 10. 9..
+ * Created by Ivan Perez on 2019
  */
 
-var srt_to_vtt = require('srt-to-vtt');
+var vtt_to_srt = require('vtt-to-srt');
 var fs = require('fs');
 var path = require('path');
 
@@ -11,19 +11,19 @@ module.exports = function (directoryPath){
     //collect srt files
     fs.readdir(directoryPath, function(err, fileNames){
         var srtFileNames = fileNames.filter(function(fileName){
-            return fileName.endsWith('.srt');
+            return fileName.endsWith('.vtt');
         });
 
-        console.log("There are", srtFileNames.length, "srt files.");
+        console.log("There are", srtFileNames.length, "vtt files.");
 
 
         //a vtt file has the same name with the corresponding srt file
         var vttFileNames = srtFileNames.map(function(srtFileName){
             var lastIndex = srtFileName.lastIndexOf('.');
-            return srtFileName.slice(0,lastIndex) + '.vtt';
+            return srtFileName.slice(0,lastIndex) + '.srt';
         });
 
-        console.log("Converting srt to vtt...");
+        console.log("Converting vtt to srt...");
 
         //for each srt, convert the srt file to vtt file
         for (var i=0;i<srtFileNames.length;i++){
@@ -33,7 +33,7 @@ module.exports = function (directoryPath){
             var vttFilePath = path.join(directoryPath, vttFileName);
             var input = fs.createReadStream(srtFilePath);
             var output = fs.createWriteStream(vttFilePath);
-            input.pipe(srt_to_vtt()).pipe(output);
+            input.pipe(vtt_to_srt()).pipe(output);
         }
         console.log('Done');
     });
